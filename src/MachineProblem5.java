@@ -10,12 +10,14 @@ public class MachineProblem5 {
 
         Calendar newCalendar = getNewCalendar();
 
-        while ( currentCalendar.equals(newCalendar) ) {
+        if ( currentCalendar.equals(newCalendar) ) {
             System.out.println("Dates are equal. Please enter another one.");
             newCalendar = getNewCalendar();
-        }
 
-        currentCalendar = newCalendar;
+            if( currentCalendar.equals(newCalendar) ) {
+                currentCalendar = newCalendar;
+            }
+        }
 
         System.out.println("Current value: " + currentCalendar);
     }
